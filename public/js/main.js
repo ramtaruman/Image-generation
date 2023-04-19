@@ -4,14 +4,27 @@ function onSubmit(e) {
     document.querySelector('.msg').textContent = '';
     document.querySelector('#image').src = '';
 
-    const prompt = document.querySelector('#prompt').value;
+    const init_prompt = document.getElementById('prompt').value;
+    console.log(init_prompt);
+    const style_prompt = document.getElementById('style-prompt').value;
+    console.log(style_prompt);
+    const color_prompt = document.getElementById('color-prompt').value;
+    console.log(color_prompt);
     const size = document.querySelector('#size').value;
 
-    if (prompt === '') {
+    if (init_prompt === '') {
       alert('Please add some text');
       return;
     }
-
+    if (style_prompt === '') {
+      alert('Please add a style');
+      return;
+    }
+    if (color_prompt === '') {
+      alert('Please add a color palette');
+      return;
+    }
+    const prompt = init_prompt + ' in the style of ' + style_prompt + ' with a ' + color_prompt +' tone '
     generateImageRequest(prompt, size);
   }
 
