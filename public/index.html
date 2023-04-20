@@ -32,10 +32,72 @@
       <section class="showcase">
         <form id="image-form">
           <h1>Describe An Image</h1>
+          <input type="text" id="prompt" placeholder="Type the prompt (Example : A person stargazing)" />
           <div class="form-control">
-            <input type="text" id="style-prompt" placeholder="Type the style (Example : Renaissance)" />
-            <input type="text" id="prompt" placeholder="Type the prompt (Example : A person stargazing)" />
-            <input type="text" id="color-prompt" placeholder="Type the color palette (Example : Vibrant) " />
+            <select name="Image Type" id="imgtyp">
+              <option value="Landscape">Landscapes</option>
+              <option value="Cityscape">Cityscapes</option>
+              <option value="Wildlife">Wildlife</option>
+              <option value="Abstract">Abstract</option>
+              <option value="Still life">Still life</option>
+              <option value="Seascape">Seascape</option>
+              <option value="Nightscape">Nightscape</option>
+            </select>
+            <select name="Image Style" id="imgstyl">
+              <option value="Realistic">Realistic</option>
+              <option value="Impressionistic">Impressionistic</option>
+              <option value="Pop Art">Pop Art</option>
+              <option value="Cartoon">Cartoon</option>
+              <option value="Minimalistic">Minimalistic</option>
+              <option value="Gothic">Gothic</option>
+              <option value="Vintage">Vintage</option>
+              <option value="Retro">Retro</option>
+              <option value="Futuristic">Futuristic</option>
+              <option value="Surreal">Surreal</option>
+            </select>
+            <select name="Color Scheme" id="imgclr">
+              <option value="Warm colors">Warm colors</option>
+              <option value="Cool colors">Cool colors</option>
+              <option value="Pastel colors">Pastel color</option>
+              <option value="Vibrant colors">Vibrant colors</option>
+              <option value="Monochrome">Monochrome</option>
+              <option value="Complimentary colors">Complimentary colors</option>
+              <option value="Analogous colors">Analogous colors</option>
+              <option value="Triadic colors">Triadic colors</option>
+              <option value="Neutral colors">Neutral colors</option>
+              <option value="Bright colors">Bright colors</option>
+            </select>
+            <select name="Image Content" id="imgcnt">
+              <option value="Nature">Nature</option>
+              <option value="Buildings and Architecture">Buildings and Architecture</option>
+              <option value="Animals">Animals</option>
+              <option value="People">People</option>
+              <option value="Food and Drink">Food and Drink</option>
+              <option value="Sports">Sports</option>
+              <option value="Art and Culture">Art and Culture</option>
+              <option value="Technology">Technology</option>
+              <option value="Travel and Adventure">Travel and Adventure</option>
+              <option value="Fashion">Fashion</option>
+            </select>
+            <select name="Image Mood" id="imgmod">
+              <option value="Happy">Happy</option>
+              <option value="Sad">Sad</option>
+              <option value="Romantic">Romantic</option>
+              <option value="Nostalgic">Nostalgic</option>
+              <option value="Exciting">Exciting</option>
+              <option value="Mysterious">Mysterious</option>
+              <option value="Calming">Calming</option>
+              <option value="Energizing">Energizing</option>
+              <option value="Playful">Playful</option>
+              <option value="Thoughtful">Thoughtful</option>
+            </select><select name="Image BG" id="imgbg">
+              <option value="White">White</option>
+              <option value="Black">Black</option>
+              <option value="Transparent">Transparent</option>
+              <option value="Solid Color">Solid Color</option>
+              <option value="Gradient">Gradient</option>
+              <option value="Pattern">Pattern</option>
+            </select>
           </div>
           <!-- size -->
           <div class="form-control">
