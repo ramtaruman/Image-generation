@@ -4,14 +4,26 @@ function onSubmit(e) {
     document.querySelector('.msg').textContent = '';
     document.querySelector('#image').src = '';
 
-    const prompt = document.querySelector('#prompt').value;
+    const init_prompt = document.querySelector('#prompt').value;
+    const type_prompt = document.getElementById('imgtyp').value;
+    console.log(type_prompt);
+    const style_prompt = document.getElementById('imgstyl').value;
+    console.log(style_prompt);
+    const color_prompt = document.getElementById('imgclr').value;
+    console.log(color_prompt);
+    const content_prompt = document.getElementById('imgcnt').value;
+    console.log(content_prompt);
+    const mood_prompt = document.getElementById('imgmod').value;
+    console.log(mood_prompt);
+    const bg_prompt = document.getElementById('imgbg').value;
+    console.log(bg_prompt);
     const size = document.querySelector('#size').value;
 
-    if (prompt === '') {
+    if (init_prompt === '') {
       alert('Please add some text');
       return;
     }
-
+    const prompt = init_prompt + ' in a setting of ' + type_prompt + ', in a ' + style_prompt +' style, with a color scheme of  ' + color_prompt + ' having content of ' + content_prompt + ' with ' + mood_prompt + ' mood and with background ' +bg_prompt
     generateImageRequest(prompt, size);
   }
 
